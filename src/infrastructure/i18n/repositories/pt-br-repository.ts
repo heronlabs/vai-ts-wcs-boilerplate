@@ -5,7 +5,6 @@ export class PtBrRepository implements I18n {
   translate(): WcsTextDto {
     return {
       languages: {
-        english: 'Inglês',
         portuguese: 'Português',
       },
     };
