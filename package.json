@@ -10,6 +10,13 @@
     "lint:check": "gts lint",
     "lint:fix": "gts fix"
   },
+  "resolutions": {
+    "styled-components": "^5"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
     "@testing-library/jest-dom": "^5.14.1",
