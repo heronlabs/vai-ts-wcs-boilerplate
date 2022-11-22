@@ -7,11 +7,7 @@ import * as S from './style';
 const Home = () => {
   return (
     <div className="home">
-      <div className="App">
-        <header className="App-header">
-          <S.ProjectName>my-project</S.ProjectName>
-        </header>
-      </div>
+      <S.ProjectName>my-project</S.ProjectName>
     </div>
   );
 };
