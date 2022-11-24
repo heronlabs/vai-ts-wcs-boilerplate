@@ -1,13 +1,15 @@
 import './style.scss';
 
-import {translate} from 'react-polyglot';
+import {translate, useTranslate} from 'react-polyglot';
 
 import * as S from './style';
 
 const Home = () => {
+  const t = useTranslate();
+
   return (
     <div className="home">
-      <S.ProjectName>my-project</S.ProjectName>
+      <S.ProjectName>{t('welcome.title')}</S.ProjectName>
     </div>
   );
 };

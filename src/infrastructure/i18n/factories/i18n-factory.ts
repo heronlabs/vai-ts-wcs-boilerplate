@@ -1,5 +1,5 @@
-import {Languages} from '../../../core/enums/languages';
 import {WcsTextDto} from '../dtos/wcs-text-dto';
+import {Languages} from '../enums/languages';
 import {PtBrRepository} from '../repositories/pt-br-repository';
 
 export class I18nFactory {

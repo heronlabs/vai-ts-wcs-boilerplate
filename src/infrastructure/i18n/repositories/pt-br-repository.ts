@@ -7,6 +7,9 @@ export class PtBrRepository implements I18n {
       languages: {
         portuguese: 'Português',
       },
+      welcome: {
+        title: 'Meu Projeto',
+      },
     };
   }
 }

@@ -1,18 +1,16 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-import {Languages} from '../../core/enums/languages';
+import {Languages} from '../../i18n/enums/languages';
 
 export type LocaleStore = {
   currentLanguage: Languages;
 };
 
-const initialState: LocaleStore = {
-  currentLanguage: Languages.PT_BR,
-};
-
 export const localeSlice = createSlice({
   name: 'locale',
-  initialState,
+  initialState: {
+    currentLanguage: Languages.PT_BR,
+  },
   reducers: {
     changeLanguage: (
       state: LocaleStore,
@@ -25,4 +23,4 @@ export const localeSlice = createSlice({
 
 export const {changeLanguage} = localeSlice.actions;
 
-export default localeSlice.reducer;
+export const localeSliceReducer = localeSlice.reducer;
