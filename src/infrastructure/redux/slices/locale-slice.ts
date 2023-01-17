@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-import {Languages} from '../../i18n/enums/languages';
+import {Languages} from '../../../core/enums/languages';
 
 export type LocaleStore = {
   currentLanguage: Languages;

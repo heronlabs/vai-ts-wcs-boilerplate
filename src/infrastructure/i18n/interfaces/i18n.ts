@@ -1,5 +1,5 @@
-import {WcsTextDto} from '../dtos/wcs-text-dto';
+import {WcsLabelDto} from '../repositories/wcs-label-dto';
 
 export interface I18n {
-  translate(): WcsTextDto;
+  translate(): WcsLabelDto;
 }

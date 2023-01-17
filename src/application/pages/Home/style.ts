@@ -1,6 +1,10 @@
-@import '../../../style/main.scss';
+import styled from 'styled-components';
 
-.home {
+export const ProjectName = styled.p`
+  color: white;
+`;
+
+export const Home = styled.div`
   max-width: 1366px;
   min-height: 100vh;
   display: flex;
@@ -9,4 +13,4 @@
   justify-content: center;
   font-size: 24px;
   color: white;
-}
+`;

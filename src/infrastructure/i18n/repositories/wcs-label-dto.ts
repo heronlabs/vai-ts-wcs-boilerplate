@@ -1,4 +1,4 @@
-export type WcsTextDto = {
+export type WcsLabelDto = {
   languages: {
     portuguese: string;
   };
