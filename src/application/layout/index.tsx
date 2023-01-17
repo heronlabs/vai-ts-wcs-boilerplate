@@ -9,7 +9,7 @@ import {
 
 import {WcsLabelFactory} from '../../infrastructure/i18n/repositories/wcs-label-factory';
 import {RootState} from '../../infrastructure/redux/store';
-import Home from '../pages/_home';
+import Home from '../pages/home';
 import * as S from './style';
 
 const Layout = () => {
