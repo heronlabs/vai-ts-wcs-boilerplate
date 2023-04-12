@@ -1,7 +1,6 @@
 name: Build WCS Stack
 
 on:
-  - workflow_dispatch
   - push
 
 jobs:
