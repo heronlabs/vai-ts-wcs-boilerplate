@@ -10,15 +10,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: '[ACTION] | Clone build wcs action'
-        uses: actions/checkout@v3
-        with:
-          repository: heronlabs/build-wcs-action
-          ref: 3.0.0
-          token: ${{ secrets.AUTHOR_PERSONAL_ACCESS}}
-          path: ./build-wcs-action
+      - name: '[BUILD] | Install Dependencies'
+        run: yarn install --frozen-lockfile
+        shell: bash
 
-      - name: '[ACTION] | Run build wcs action'
-        uses: './build-wcs-action/application/github'
-        with:
-          AUTHOR_PERSONAL_ACCESS: ${{ secrets.AUTHOR_PERSONAL_ACCESS }}
+      - name: '[BUILD] | Build'
+        run: yarn build
+        shell: bash
+
+      - name: '[TEST] | Lint Check'
+        run: yarn lint:check
+        shell: bash
