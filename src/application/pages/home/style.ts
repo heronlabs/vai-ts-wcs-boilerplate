@@ -13,4 +13,5 @@ export const Home = styled.div`
   justify-content: center;
   font-size: 24px;
   color: white;
+  margin: 0 auto;
 `;
