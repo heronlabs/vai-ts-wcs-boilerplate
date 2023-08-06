@@ -1,12 +1,22 @@
 import {v4} from 'uuid';
 
-export const applyBreakline = (text: string | undefined) => {
+import {formatBoldItalicText} from './text-bold-italic';
+
+export const applyBreakline = (
+  text: string | undefined,
+  applyBreakline?: boolean
+) => {
   return (
     <>
-      {text?.split(/\n/g).map(line => (
+      {text?.split(/\n/g).map((line, index, array) => (
         <span key={v4()}>
-          {line}
-          <br />
+          <div
+            dangerouslySetInnerHTML={{
+              __html: formatBoldItalicText(line),
+            }}
+          />
+
+          {!applyBreakline && index !== array.length - 1 && <br />}
         </span>
       ))}
     </>

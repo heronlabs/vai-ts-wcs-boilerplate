@@ -9,8 +9,8 @@ import {
 
 import {WcsLabelFactory} from '../../infrastructure/i18n/repositories/wcs-label-factory';
 import {RootState} from '../../infrastructure/redux/store';
+import Loader from '../components/loader';
 import Home from '../pages/home';
-import * as S from './style';
 
 const Layout = () => {
   const locale = useSelector(
@@ -18,16 +18,16 @@ const Layout = () => {
   );
 
   return (
-    <S.Content>
-      <I18n locale={locale} messages={WcsLabelFactory.make(locale)}>
-        <Router>
+    <I18n locale={locale} messages={WcsLabelFactory.make(locale)}>
+      <Router>
+        <Loader>
           <Switch>
             <Route path="/" exact render={() => <Home />} />
             <Redirect from="*" to="/" />
           </Switch>
-        </Router>
-      </I18n>
-    </S.Content>
+        </Loader>
+      </Router>
+    </I18n>
   );
 };
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ProjectName = styled.p`
-  color: white;
+  color: black;
 `;
 
 export const Home = styled.div`
@@ -12,6 +12,6 @@ export const Home = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  color: white;
+  color: black;
   margin: 0 auto;
 `;
